@@ -1,0 +1,23 @@
+{
+  "name": "pi-agent-dashboard",
+  "version": "0.1.0",
+  "description": "Pi extension that writes .pi-status.json on session lifecycle events for external monitoring",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "README.md"
+  ],
+  "pi": {
+    "extensions": ["./src/index.ts"]
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "@mariozechner/pi-coding-agent": "^0.73.0",
+    "typescript": "^5.8.0"
+  }
+}
