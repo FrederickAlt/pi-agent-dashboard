@@ -8,10 +8,19 @@
   "files": [
     "dist/**/*"
   ],
+  "bin": {
+    "pi-agent-dashboard": "./dist/bin.js"
+  },
   "scripts": {
     "build": "tsc",
     "test": "vitest run",
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "start": "node dist/bin.js"
+  },
+  "dependencies": {
+    "@types/blessed": "^0.1.25",
+    "blessed": "^0.1.81",
+    "chokidar": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "^25.6.2",
